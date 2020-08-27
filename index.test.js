@@ -16,8 +16,9 @@ test('wait 500 ms', async () => {
 });
 
 // shows how the runner will run a javascript action with env / stdout protocol
-test('test runs', () => {
-  process.env['INPUT_MILLISECONDS'] = 500;
-  const ip = path.join(__dirname, 'index.js');
-  console.log(cp.execSync(`node ${ip}`, {env: process.env}).toString());
+test('show hosts content', () => {
+  // process.env['INPUT_HOSTS'] = "12.0.0.1 abc.com";
+  // const ip = path.join(__dirname, 'index.js');
+  // console.log(`ip: ${INPUT_HOSTS}`)
+  console.log(cp.execSync(`cat /etc/hosts`, {env: process.env}).toString());
 })
