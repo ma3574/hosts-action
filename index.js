@@ -5,8 +5,8 @@ const wait = require('./wait');
 // most @actions toolkit packages have async methods
 async function run() {
   try {
-    const ms = core.getInput('milliseconds');
-    core.info(`Waiting ${ms} milliseconds ...`);
+    const hosts = core.getInput('hosts');
+    core.info(`Hosts data is: ${hosts}`);
 
     core.debug((new Date()).toTimeString()); // debug is only output if you set the secret `ACTIONS_RUNNER_DEBUG` to true
     await wait(parseInt(ms));

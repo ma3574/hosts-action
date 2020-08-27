@@ -1,13 +1,12 @@
-name: 'Wait'
-description: 'Wait a designated number of milliseconds'
+name: 'hosts'
+description: 'Add entries to the hosts '
 inputs:
-  milliseconds:  # id of input
-    description: 'number of milliseconds to wait'
+  hosts:
+    description: 'Entries to add to the hosts file'
     required: true
-    default: '1000'
-outputs:
-  time: # output will be available to future steps
-    description: 'The message to output'
+# outputs:
+#   time: # output will be available to future steps
+#     description: 'The message to output'
 runs:
   using: 'node12'
   main: 'dist/index.js'
