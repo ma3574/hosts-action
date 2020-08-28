@@ -1,5 +1,5 @@
 name: 'hosts'
-description: 'Add entries to the hosts '
+description: 'Add entries to the hosts file'
 inputs:
   hosts:
     description: 'Entries to add to the hosts file'
