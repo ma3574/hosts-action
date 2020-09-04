@@ -1392,7 +1392,7 @@ async function run() {
   try {
     const hosts = core.getInput('hosts');
     core.info(`Add to hosts: \n${hosts}`);
-    exec.exec(`sudo echo ${hosts} >> /etc/hosts`)
+    exec.exec(`sudo echo '${hosts}' >> /etc/hosts`)
     exec.exec(`sudo echo '122.0.0.1 nano.com' >> /etc/hosts`)
     exec.exec(`echo`, ['hosts file content:'])
     exec.exec('cat', ['/etc/hosts'])
