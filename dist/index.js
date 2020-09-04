@@ -1392,8 +1392,8 @@ async function run() {
   try {
     const hosts = core.getInput('hosts');
     core.info(`Add to hosts: \n${hosts}`);
-    exec.exec(`echo ${hosts} >> /etc/hosts`)
-    exec.exec(`echo '122.0.0.1 nano.com' >> /etc/hosts`)
+    exec.exec(`sudo echo ${hosts} >> /etc/hosts`)
+    exec.exec(`sudo echo '122.0.0.1 nano.com' >> /etc/hosts`)
     exec.exec(`echo`, ['hosts file content:'])
     exec.exec('cat', ['/etc/hosts'])
     // core.debug((new Date()).toTimeString()); // debug is only output if you set the secret `ACTIONS_RUNNER_DEBUG` to true
